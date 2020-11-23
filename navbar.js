@@ -8,7 +8,6 @@ EventLoop = {
     {
         XPoint = event.clientX;
 
-
         target.addEventListener("mousemove", EventLoop.EventMove);
     },
     EventMove: function(event)
@@ -22,7 +21,6 @@ EventLoop = {
         }else if(Move < -200){
             block.style.left = -200 + "px";
         }
-
 
         target.addEventListener("mouseup", EventLoop.EventUp);
     }, 
