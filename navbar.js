@@ -1,5 +1,6 @@
 let target = document.querySelector('.right-side');
 let block = document.querySelector('.slide');
+let overlayer = document.querySelector('.overlayer');
 let XPoint = null;
 let Move = null;
 
@@ -28,8 +29,10 @@ EventLoop = {
     {
         if(Move >= 50){
             block.style.left = 0 + "px";
+            overlayer.classList.add("overlayer-on");
         }else{
             block.style.left = -200 + "px";
+            overlayer.classList.remove("overlayer-on");
         }
 
         XPoint = null;
