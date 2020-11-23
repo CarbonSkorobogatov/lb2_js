@@ -1,20 +1,22 @@
+let Z = null;
 let X = null;
 let block = document.querySelector('.navbar');
-let Z;
+
 
 window.addEventListener("mousedown", element =>{
     X = element.clientX;
 })
 
 window.addEventListener("mouseup", () => {
-    X = null;
     if(Z > 150){
         block.style.left = 0 + "%";
+        Overlayer.Add();
     }if(Z < 150){
         block.style.left = -100 + "%";
+        Overlayer.Remove();
     }
     Z = null;
-    console.log(Z);
+    X = null;
 })
 
 window.addEventListener("mousemove", element =>{
@@ -28,8 +30,19 @@ window.addEventListener("mousemove", element =>{
         block.style.left = -100 - Z + "%";
     }
 
-    console.log(Z);
 })
+
+Overlayer = {
+    Add: function Add(){
+        document.querySelector('.overlayer').classList.add("overlayer-on");
+        console.log(1)
+    }, 
+    Remove: function Remove(){
+        document.querySelector('.overlayer').classList.remove("overlayer-on");
+        console.log(2)
+    }
+}
+
 
 
 

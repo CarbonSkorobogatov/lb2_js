@@ -13,10 +13,25 @@ h1, h2, h3, h4, h5, h6, a, p{
 
 .navbar{
     position: absolute;
-
     left: -100%;
     border: 1px solid #000;
     width: 20vh;
     height: 100vh;
+    z-index: 100;
     transition: .3s;
+    background-color: #fff;
+}
+
+
+.overlayer{
+    background-color: rgba(0, 0, 0, 0.158);
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+}
+
+.overlayer-on{
+    display: block;
 }
